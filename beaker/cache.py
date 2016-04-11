@@ -20,6 +20,7 @@ import beaker.ext.memcached as memcached
 import beaker.ext.database as database
 import beaker.ext.sqla as sqla
 import beaker.ext.google as google
+import beaker.ext.uwsgic as uwsgic
 from functools import wraps
 
 # Initialize the cache region dict
@@ -123,6 +124,7 @@ clsmap = _backends({
           'ext:database': database.DatabaseNamespaceManager,
           'ext:sqla': sqla.SqlaNamespaceManager,
           'ext:google': google.GoogleNamespaceManager,
+          'ext:uwsgic': uwsgic.UwsgiNamespaceManager,
           })
 
 
